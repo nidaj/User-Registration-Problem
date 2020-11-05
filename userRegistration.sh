@@ -10,3 +10,13 @@ then
 else
         echo "Invalid"
 fi
+echo "-------Last Name Validation------------"
+read -p "Enter last Name: " lName
+pat_L="^[[:upper:]]{1}[[:lower:]]{2,}$"
+echo $pat
+if [[ $lName =~ $pat_L ]]
+then
+        echo "Valid"
+else
+        echo "Invalid"
+fi
