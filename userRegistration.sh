@@ -38,3 +38,13 @@ then
 else
         echo "Invalid"
 fi
+echo "-------Password Validation----------"
+read -p "Enter Password: " passwd
+#pat="([A-Za-z0-9$%#@]{7,}[0-9]^{1,})"
+pat="(?=.*[?!])(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9?!]{8,}"
+if [[ $passwd =~ $pat ]]
+then
+        echo "Valid"
+else
+        echo "Invalid"
+fi
