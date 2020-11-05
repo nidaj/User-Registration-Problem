@@ -20,3 +20,12 @@ then
 else
         echo "Invalid"
 fi
+echo "-------Email Validation-----------------"
+read -p "Enter the email address: " email
+pat_email="^([a-z]+)([-\.\+]{0,1})([0-9]*)([^-\.\+])@([a-z1-9]+)\.([a-z]{2,4})([a-z\.]{2,4})?([^-\.\+])$"
+if [[ $email =~ $pat_email ]]
+then
+        echo "Valid"
+else
+        echo "invalid"
+fi
