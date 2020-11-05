@@ -29,3 +29,12 @@ then
 else
         echo "invalid"
 fi
+echo "-------Mobile Number Validation----------"
+read -p "Enter Your Mobile Number: " num
+pat_no="^\+91[ ]([7-9]){1}([0-9]{9})$"
+if [[ $num =~ $pat_no ]]
+then
+        echo "Valid"
+else
+        echo "Invalid"
+fi
